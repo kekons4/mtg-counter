@@ -1,51 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTG Counters</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+  </head>
+  <body>
     <div class="container">
-        <div id="health" class="health-container">
-            <img class="health-img" src="./images/Heart-Container.png" alt="Heart Image">
-            <p style="border-bottom:1px grey solid; margin-left: 25%; margin-right: 25%;">Health</p>
-            <div class="health-counter-cont">
-                <button id="red-plus" class="health-button-red" onclick="redHpUp()">+</button>
-                <div id="red-h-counter" class="health-counter-red">20</div>
-                <button id="red-minus" class="health-button-red" onclick="redHpDown()">-</button>
-                <button id="red-hp-reset" class="counter-reset" onclick="resetRedHp()">Reset</button>
-            </div>
-            <div class="health-counter-cont">
-                <button id="blue-plus" class="health-button-blue" onclick="blueHpUp()">+</button>
-                <div id="blue-h-counter" class="health-counter-blue">20</div>
-                <button id="blue-minus" class="health-button-blue" onclick="blueHpDown()">-</button>
-                <button id="red-hp-reset" class="counter-reset" onclick="resetBlueHp()">Reset</button>
-            </div>
+      <div id="health" class="health-container">
+        <img
+          class="health-img"
+          src="./images/Heart-Container.png"
+          alt="Heart Image"
+        />
+        <p
+          style="border-bottom:1px grey solid; margin-left: 25%; margin-right: 25%;"
+        >
+          Health
+        </p>
+        <div class="health-counter-cont">
+          <button
+            id="red-plus"
+            class="health-button-red"
+            onclick="socket.emit('redHpUp', $('#red-h-counter').text())"
+          >
+            +
+          </button>
+          <div id="red-h-counter" class="health-counter-red">20</div>
+          <button
+            id="red-minus"
+            class="health-button-red"
+            onclick="socket.emit('redHpDown', $('#red-h-counter').text())"
+          >
+            -
+          </button>
+          <button
+            id="red-hp-reset"
+            class="counter-reset"
+            onclick="socket.emit('resetRedHp')"
+          >
+            Reset
+          </button>
         </div>
-        <div id="poison" class="poison-container">
-            <img class="poison-img" src="./images/poison_counter.png" alt="poison image">
-            <p style="border-bottom: 1px grey solid; margin-left: 25%; margin-right: 25%;">Poison</p>
-            <div class="poison-counter-cont">
-                <button id="red-plus" class="health-button-red" onclick="redPoisonUp()">+</button>
-                <div id="red-p-counter" class="poison-counter-red">0</div>
-                <button id="red-minus" class="health-button-red" onclick="redPoisonDown()">-</button>
-                <button id="red-hp-reset" class="counter-reset" onclick="resetRedPoison()">Reset</button>
-            </div>
-            <div class="poison-counter-cont">
-                <button id="blue-plus" class="health-button-blue" onclick="bluePoisonUp()">+</button>
-                <div id="blue-p-counter" class="poison-counter-blue">0</div>
-                <button id="blue-minus" class="health-button-blue" onclick="bluePoisonDown()">-</button>
-                <button id="red-hp-reset" class="counter-reset" onclick="resetBluePoison()">Reset</button>
-            </div>
+        <div class="health-counter-cont">
+          <button
+            id="blue-plus"
+            class="health-button-blue"
+            onclick="socket.emit('blueHpUp', $('#blue-h-counter').text())"
+          >
+            +
+          </button>
+          <div id="blue-h-counter" class="health-counter-blue">20</div>
+          <button
+            id="blue-minus"
+            class="health-button-blue"
+            onclick="socket.emit('blueHpDown', $('#blue-h-counter').text())"
+          >
+            -
+          </button>
+          <button
+            id="red-hp-reset"
+            class="counter-reset"
+            onclick="socket.emit('resetBlueHp')"
+          >
+            Reset
+          </button>
         </div>
+      </div>
+      <div id="poison" class="poison-container">
+        <img
+          class="poison-img"
+          src="./images/poison_counter.png"
+          alt="poison image"
+        />
+        <p
+          style="border-bottom: 1px grey solid; margin-left: 25%; margin-right: 25%;"
+        >
+          Poison
+        </p>
+        <div class="poison-counter-cont">
+          <button
+            id="red-plus"
+            class="health-button-red"
+            onclick="socket.emit('redPoisonUp', $('#red-p-counter').text())"
+          >
+            +
+          </button>
+          <div id="red-p-counter" class="poison-counter-red">0</div>
+          <button
+            id="red-minus"
+            class="health-button-red"
+            onclick="socket.emit('redPoisonDown', $('#red-p-counter').text())"
+          >
+            -
+          </button>
+          <button
+            id="red-hp-reset"
+            class="counter-reset"
+            onclick="socket.emit('resetRedPoison')"
+          >
+            Reset
+          </button>
+        </div>
+        <div class="poison-counter-cont">
+          <button
+            id="blue-plus"
+            class="health-button-blue"
+            onclick="socket.emit('bluePoisonUp', $('#blue-p-counter').text())"
+          >
+            +
+          </button>
+          <div id="blue-p-counter" class="poison-counter-blue">0</div>
+          <button
+            id="blue-minus"
+            class="health-button-blue"
+            onclick="socket.emit('bluePoisonDown', $('#blue-p-counter').text())"
+          >
+            -
+          </button>
+          <button
+            id="red-hp-reset"
+            class="counter-reset"
+            onclick="socket.emit('resetBluePoison')"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
     </div>
-    <script src="./script.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-     var socket = io();
+      var socket = io();
+
+      //Red Hp
+      socket.on("redHpUp", val => {
+        $("#red-h-counter").text(val);
+      });
+      socket.on("redHpDown", val => {
+        $("#red-h-counter").text(val);
+      });
+      socket.on("resetRedHp", val => {
+        $("#red-h-counter").text(val);
+      });
+
+      //Blue Hp
+      socket.on("blueHpUp", val => {
+        $("#blue-h-counter").text(val);
+      });
+      socket.on("blueHpDown", val => {
+        $("#blue-h-counter").text(val);
+      });
+      socket.on("resetBlueHp", val => {
+        $("#blue-h-counter").text(val);
+      });
+
+      //Red Poison
+      socket.on("redPoisonUp", val => {
+        $("#red-p-counter").text(val);
+      });
+      socket.on("redPoisonDown", val => {
+        $("#red-p-counter").text(val);
+      });
+      socket.on("resetRedPoison", val => {
+        $("#red-p-counter").text(val);
+      });
+
+      //Blue Poison
+      socket.on("bluePoisonUp", val => {
+        $("#blue-p-counter").text(val);
+      });
+      socket.on("bluePoisonDown", val => {
+        $("#blue-p-counter").text(val);
+      });
+      socket.on("resetBluePoison", val => {
+        $("#blue-p-counter").text(val);
+      });
     </script>
-</body>
+  </body>
 </html>
