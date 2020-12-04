@@ -6,7 +6,7 @@ body{
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     border: 1px black solid;
     width: 100%;
@@ -20,6 +20,7 @@ body{
 /*-----------Health Stuff----------------------------*/
 
 .health-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,14 +50,14 @@ body{
 .health-counter-cont {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     box-shadow: 0 6px 6px rgba(0,0,0,0.2);
     margin: 5px;
-    width: 50%;
+    width: 75%;
     text-align: center;
 }
 
@@ -88,6 +89,9 @@ body{
 }
 
 .health-button-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     background-color: red;
@@ -102,6 +106,9 @@ body{
 }
 
 .health-button-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     background-color: royalblue;
@@ -119,6 +126,7 @@ body{
 
 
 .poison-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -147,14 +155,14 @@ body{
 .poison-counter-cont {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     box-shadow: 0 6px 6px rgba(0,0,0,0.2);
     margin: 5px;
-    width: 50%;
+    width: 75%;
     text-align: center;
 }
 
@@ -186,6 +194,9 @@ body{
 }
 
 .poison-button-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     background-color: red;
@@ -196,6 +207,9 @@ body{
 }
 
 .poison-button-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px grey solid;
     border-radius: 5px;
     background-color: royalblue;
@@ -219,4 +233,27 @@ body{
 
 .counter-reset:hover {
     background-color: lightgrey;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .health-container {
+        height: 100%;
+    }
+
+    .poison-container {
+        height: 100%;
+    }
+    
+    .health-counter-cont {
+        width: 100%;
+    }
+
+    .poison-counter-cont {
+        width: 100%;
+    }
+
 }
