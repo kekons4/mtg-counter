@@ -45,3 +45,19 @@ function bluePoisonDown() {
     bluePoison --;
     document.getElementById("blue-p-counter").innerHTML = bluePoison;
 }
+
+function resetRedHp() {
+    document.getElementById("red-h-counter").innerHTML = 20;
+}
+
+function resetBlueHp() {
+    document.getElementById("blue-h-counter").innerHTML = 20;
+}
+
+function resetRedPoison() {
+    document.getElementById("red-p-counter").innerHTML = 0;
+}
+
+function resetBluePoison() {
+    document.getElementById("blue-p-counter").innerHTML = 0;
+}
