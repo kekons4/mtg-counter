@@ -1,2 +1,2 @@
 # mtg-counter
- magic health and poison
+ magic health and poison counters with socket.io socket servers
