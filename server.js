@@ -4,6 +4,18 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var path = require("path");
 
+const DEFAULT_VALUES = {
+  life: 40,
+  poison: 0
+};
+
+var currentValues = {
+  "red-h-counter": DEFAULT_VALUES.life,
+  "red-p-counter": DEFAULT_VALUES.poison,
+  "blue-h-counter": DEFAULT_VALUES.life,
+  "blue-p-counter": DEFAULT_VALUES.poison
+}
+
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -12,73 +24,78 @@ app.get("/", (req, res) => {
 
 io.on("connection", socket => {
   console.log("a user connected");
+  io.emit("init", currentValues);
 
   // +1 Red HP
   socket.on("redHpUp", val => {
-    val++;
-    io.emit("redHpUp", val);
+    currentValues["red-h-counter"]++;
+    io.emit("redHpUp", currentValues["red-h-counter"]);
   });
 
   // -1 Red HP
   socket.on("redHpDown", val => {
-    val--;
-    io.emit("redHpDown", val);
+    currentValues["red-h-counter"]--;
+    io.emit("redHpDown", currentValues["red-h-counter"]);
   });
 
   //Reset Red HP
   socket.on("resetRedHp", () => {
-    io.emit("resetRedHp", 20);
+    currentValues["red-h-counter"] = DEFAULT_VALUES.life;
+    io.emit("resetRedHp", currentValues["red-h-counter"]);
   });
 
   // +1 Blue HP
   socket.on("blueHpUp", val => {
-    val++;
-    io.emit("blueHpUp", val);
+    currentValues["blue-h-counter"]++;
+    io.emit("blueHpUp", currentValues["blue-h-counter"]);
   });
 
   // -1 Blue HP
   socket.on("blueHpDown", val => {
-    val--;
-    io.emit("blueHpDown", val);
+    currentValues["blue-h-counter"]--;
+    io.emit("blueHpDown", currentValues["blue-h-counter"]);
   });
 
   //Reset Blue HP
   socket.on("resetBlueHp", () => {
-    io.emit("resetBlueHp", 20);
+    currentValues["blue-h-counter"] = DEFAULT_VALUES.life
+    io.emit("resetBlueHp", currentValues["blue-h-counter"]);
   });
 
   // +1 Red Poison
   socket.on("redPoisonUp", val => {
-    val++;
-    io.emit("redPoisonUp", val);
+    currentValues["red-p-counter"]++;
+    io.emit("redPoisonUp", currentValues["red-p-counter"]);
   });
 
   // -1 Red Poison
   socket.on("redPoisonDown", val => {
-    val--;
-    io.emit("redPoisonDown", val);
+    currentValues["red-p-counter"]--;
+    io.emit("redPoisonDown", currentValues["red-p-counter"]);
   });
 
   //Reset Red Poison
   socket.on("resetRedPoison", () => {
-    io.emit("resetRedPoison", 0);
+    currentValues["red-p-counter"] = DEFAULT_VALUES.poison
+    io.emit("resetRedPoison", currentValues["red-p-counter"]);
   });
 
   // +1 Blue Poison
   socket.on("bluePoisonUp", val => {
-    val++;
-    io.emit("bluePoisonUp", val);
+    currentValues["blue-p-counter"]++;
+    io.emit("bluePoisonUp", currentValues["blue-p-counter"]);
   });
 
   // -1 Blue Poison
   socket.on("bluePoisonDown", val => {
-    val--;
-    io.emit("bluePoisonDown", val);
+    currentValues["blue-p-counter"]--;
+    io.emit("bluePoisonDown", currentValues["blue-p-counter"]);
   });
 
   //Reset Blue Poison
   socket.on("resetBluePoison", () => {
-    io.emit("resetBluePoison", 0);
+    currentValues["blue-p-counter"] = DEFAULT_VALUES.poison
+    io.emit("resetBluePoison", currentValues["blue-p-counter"]);
   });
 
   socket.on("disconnect", () => {
