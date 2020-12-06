@@ -22,8 +22,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
-io.on("connection", socket => {
-  console.log("a user connected");
+io.sockets.on("connection", socket => {
+  let address = socket.request.connection.remoteAddress;
+  console.log(address + " connected");
   io.emit("init", currentValues);
 
   // +1 Red HP
@@ -99,7 +100,7 @@ io.on("connection", socket => {
   });
 
   socket.on("disconnect", () => {
-    console.log("user disconnected");
+    console.log(address + " disconnected");
   });
 });
 
