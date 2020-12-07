@@ -1,259 +1,328 @@
-body{
-    font-family: sans-serif;
-    background-color: #efefef;
+body {
+  font-family: sans-serif;
+  background-color: #efefef;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    border: 1px black solid;
-    width: 100%;
-    height: 50%;
-    background-color: grey;
-    border-radius: 5px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 1px black solid;
+  width: 100%;
+  height: 50%;
+  background-color: grey;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 /*-----------Health Stuff----------------------------*/
 
 .health-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: pink;
-    margin: 30px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: pink;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .health-img {
-    display: block;
-    width: 40%;
-    height: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
+  display: block;
+  width: 40%;
+  height: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 .health-counter-cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 5px;
-    width: 75%;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  width: 75%;
+  text-align: center;
 }
 
 .health-counter-red {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: firebrick;
-    border-radius: 10px;
-    font-size: 20px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: firebrick;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  text-align: center;
 }
 
 .health-counter-blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: royalblue;
-    border-radius: 10px;
-    font-size: 20px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: royalblue;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
 }
 
 .health-button-red {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    background-color: firebrick;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: firebrick;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  font-size: 20px;
 }
 
 .health-button-red:hover {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 .health-button-blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    background-color: royalblue;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: royalblue;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  font-size: 20px;
 }
 
 .health-button-blue:hover {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 /*-----------Poison Stuff----------------------------*/
 
-
 .poison-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: rgb(192, 255, 203);
-    margin: 30px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: rgb(192, 255, 203);
+  margin: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .poison-img {
-    display: block;
-    width: 40%;
-    height: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
+  display: block;
+  width: 40%;
+  height: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 .poison-counter-cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 5px;
-    width: 75%;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  width: 75%;
+  text-align: center;
 }
 
 .poison-counter-red {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: firebrick;
-    border-radius: 10px;
-    font-size: 20px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: firebrick;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  text-align: center;
 }
 
 .poison-counter-blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    background-color: royalblue;
-    border-radius: 10px;
-    font-size: 20px;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: royalblue;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
 }
 
 .poison-button-red {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    background-color: firebrick;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: firebrick;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  font-size: 20px;
 }
 
 .poison-button-blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 5px;
-    background-color: royalblue;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    width: 25%;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: royalblue;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  font-size: 20px;
 }
 
 .counter-reset {
-    border: 1px grey solid;
-    background-color: grey;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-    font-size: 20px;
-    height: 50%;
-    margin-left: 2px;
-    margin-right: 2px;
+  border: 1px grey solid;
+  background-color: grey;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  height: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .counter-reset:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
+}
+
+/*-------------------Coin Flip-------------------------------*/
+.coinflip-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: yellow;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.coin-img {
+  display: block;
+  width: 40%;
+  height: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.coinflip-cont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  width: 50%;
+  text-align: center;
+}
+
+.coinflip-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  background-color: orange;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 100px;
+}
+
+.coinflip-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: teal;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 25%;
+  font-size: 20px;
+}
+
+.coinflip-button:hover {
+  background-color: lightseagreen;
 }
 
 @media screen and (max-width: 600px) {
-    .container {
-        flex-wrap: wrap;
-    }
+  .container {
+    flex-wrap: wrap;
+  }
 
-    .health-container {
-        height: 100%;
-    }
+  .health-container {
+    height: 100%;
+  }
 
-    .poison-container {
-        height: 100%;
-    }
-    
-    .health-counter-cont {
-        width: 100%;
-    }
+  .poison-container {
+    height: 100%;
+  }
 
-    .poison-counter-cont {
-        width: 100%;
-    }
+  .health-counter-cont {
+    width: 100%;
+  }
 
+  .poison-counter-cont {
+    width: 100%;
+  }
 }

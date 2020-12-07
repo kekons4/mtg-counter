@@ -14,7 +14,7 @@ var currentValues = {
   "red-p-counter": DEFAULT_VALUES.poison,
   "blue-h-counter": DEFAULT_VALUES.life,
   "blue-p-counter": DEFAULT_VALUES.poison
-}
+};
 
 app.use(express.static("public"));
 
@@ -59,7 +59,7 @@ io.sockets.on("connection", socket => {
 
   //Reset Blue HP
   socket.on("resetBlueHp", () => {
-    currentValues["blue-h-counter"] = DEFAULT_VALUES.life
+    currentValues["blue-h-counter"] = DEFAULT_VALUES.life;
     io.emit("resetBlueHp", currentValues["blue-h-counter"]);
   });
 
@@ -77,7 +77,7 @@ io.sockets.on("connection", socket => {
 
   //Reset Red Poison
   socket.on("resetRedPoison", () => {
-    currentValues["red-p-counter"] = DEFAULT_VALUES.poison
+    currentValues["red-p-counter"] = DEFAULT_VALUES.poison;
     io.emit("resetRedPoison", currentValues["red-p-counter"]);
   });
 
@@ -95,8 +95,20 @@ io.sockets.on("connection", socket => {
 
   //Reset Blue Poison
   socket.on("resetBluePoison", () => {
-    currentValues["blue-p-counter"] = DEFAULT_VALUES.poison
+    currentValues["blue-p-counter"] = DEFAULT_VALUES.poison;
     io.emit("resetBluePoison", currentValues["blue-p-counter"]);
+  });
+
+  //Flip Coin
+  socket.on("coinFlip", () => {
+    let output = "";
+    let flip = Math.floor(Math.random() * 2) + 1;
+    if (flip === 1) {
+      output = "Tails";
+    } else {
+      output = "Heads";
+    }
+    io.emit("coinFlip", output);
   });
 
   socket.on("disconnect", () => {
