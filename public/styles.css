@@ -259,6 +259,37 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
+  background-color: none;
+  background-image: image("./images/coin.png");
+}
+
+.animate {
+  animation-name: coin;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes coin {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  25% {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  75% {
+    -webkit-transform: scaleY(-0.5);
+    transform: scaleY(-0.5);
+  }
+  100% {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
 }
 
 .coinflip-cont {

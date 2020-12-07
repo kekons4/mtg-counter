@@ -131,7 +131,7 @@
         </div>
       </div>
       <div id="coinFlip" class="coinflip-container">
-        <img src="./images/coin.png" alt="coin image" class="coin-img" />
+        <img id="coin-image" src="./images/coin.png" alt="coin image" class="coin-img" />
         <p
           style="border-bottom: 1px grey solid; margin-left: 25%; margin-right: 25%;"
         >
@@ -139,7 +139,7 @@
         </p>
         <div id="coinFlip-container" class="coinflip-cont">
             <div id="coin-counter" class="coinflip-counter">...</div>
-            <button id="coinButton" class="coinflip-button" onclick="socket.emit('coinFlip')">
+            <button id="coinButton" class="coinflip-button" onclick="socket.emit('coinFlip');">
                 Flip
             </button>
         </div>
@@ -205,7 +205,11 @@
       //Coin Flip
       socket.on("coinFlip", val => {
           $("#coin-counter").text(val);
-      })
+          $("#coin-image").addClass("animate");
+          setTimeout(() => {
+              $("#coin-image").removeClass("animate");
+          }, 500);
+      });
     </script>
   </body>
 </html>
