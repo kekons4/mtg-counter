@@ -6,14 +6,16 @@ var path = require("path");
 
 const DEFAULT_VALUES = {
   life: 40,
-  poison: 0
+  poison: 0,
+  coin: "..."
 };
 
 var currentValues = {
   "red-h-counter": DEFAULT_VALUES.life,
   "red-p-counter": DEFAULT_VALUES.poison,
   "blue-h-counter": DEFAULT_VALUES.life,
-  "blue-p-counter": DEFAULT_VALUES.poison
+  "blue-p-counter": DEFAULT_VALUES.poison,
+  "coin-counter": DEFAULT_VALUES.coin
 };
 
 app.use(express.static("public"));
@@ -101,14 +103,13 @@ io.sockets.on("connection", socket => {
 
   //Flip Coin
   socket.on("coinFlip", () => {
-    let output = "";
     let flip = Math.floor(Math.random() * 2) + 1;
     if (flip === 1) {
-      output = "Tails";
+      currentValues["coin-counter"] = "Tails";
     } else {
-      output = "Heads";
+      currentValues["coin-counter"] = "Heads";
     }
-    io.emit("coinFlip", output);
+    io.emit("coinFlip", currentValues["coin-counter"]);
   });
 
   socket.on("disconnect", () => {
