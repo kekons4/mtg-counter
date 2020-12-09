@@ -3,6 +3,7 @@ const app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var path = require("path");
+const PORT = process.env.PORT || 5500;
 
 const DEFAULT_VALUES = {
   life: 40,
@@ -117,6 +118,6 @@ io.sockets.on("connection", socket => {
   });
 });
 
-http.listen(80, () => {
-  console.log("listening on *:80");
+http.listen(PORT, () => {
+  console.log("listening on *: " + PORT);
 });
