@@ -208,10 +208,11 @@
 
       //Coin Flip
       socket.on("coinFlip", val => {
-          $("#coin-counter").text(val);
+        $("#coin-counter").text("...");
           $("#coin-image").addClass("animate");
           setTimeout(() => {
               $("#coin-image").removeClass("animate");
+              $("#coin-counter").text(val);
           }, 500);
       });
     </script>
