@@ -117,6 +117,6 @@ io.sockets.on("connection", socket => {
   });
 });
 
-http.listen(5500, () => {
-  console.log("listening on *:5500");
+http.listen(80, () => {
+  console.log("listening on *:80");
 });
