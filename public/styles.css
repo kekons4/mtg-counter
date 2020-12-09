@@ -17,6 +17,22 @@ body {
   position: relative;
 }
 
+.brand-img {
+  border: 1px red solid;
+  border-radius: 3px;
+  width: 100%;
+  color: #efefef;
+  text-align: center;
+  background-color: black;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.brand-img > p {
+  color: red;
+  font-size: large;
+}
+
 /*-----------Health Stuff----------------------------*/
 
 .health-container {
