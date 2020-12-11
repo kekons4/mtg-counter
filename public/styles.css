@@ -17,20 +17,22 @@ body {
   position: relative;
 }
 
-.brand-img {
-  border: 1px red solid;
+.brand-img-cont {
+  display: block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px black solid;
   border-radius: 3px;
   width: 100%;
   color: #efefef;
   text-align: center;
-  background-color: black;
+  background-color: rgb(92, 91, 91);
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-.brand-img > p {
-  color: red;
-  font-size: large;
+.brand-img {
+  width: 15%;
 }
 
 /*-----------Health Stuff----------------------------*/
@@ -356,6 +358,14 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .brand-img-cont {
+    display: block;
+  }
+
+  .brand-img {
+    width: 50%;
+  }
+  
   .container {
     flex-wrap: wrap;
   }
