@@ -26,9 +26,22 @@ body {
   width: 100%;
   color: #efefef;
   text-align: center;
-  background-color: rgb(92, 91, 91);
+  background-image: linear-gradient(to right, darkred, red, darkred);
   margin-bottom: 15px;
   font-weight: bold;
+}
+
+.threeDButton {
+  display: none;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, darkblue, blue, lightblue);
+  font-size: 20px;
+  color: white;
+}
+
+.threeDButton:hover {
+  background-image: radial-gradient(darkblue 5%, blue 90%, lightblue 5%);
 }
 
 .brand-img {
@@ -357,6 +370,34 @@ body {
   background-color: lightseagreen;
 }
 
+/*-----------------FOOTER--------------------------------------*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+  background-color: lightgrey;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-item {
+  padding: 20px;
+  color: rgb(78, 77, 77);
+  text-decoration: none;
+  background-color: lightgrey;
+}
+
+.footer-item:hover {
+  background-color: rgb(179, 176, 176);
+}
+
+/*---------------------Media Screen Size--------------------------------------*/
+
 @media screen and (max-width: 600px) {
   .brand-img-cont {
     display: block;
@@ -365,7 +406,7 @@ body {
   .brand-img {
     width: 50%;
   }
-  
+
   .container {
     flex-wrap: wrap;
   }
@@ -388,5 +429,24 @@ body {
 
   .poison-counter-cont {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .health-container {
+    width: 75%;
+  }
+
+  .poison-container {
+    width: 75%;
+  }
+
+  .coinflip-container {
+    width: 75%;
+    margin-top: -5px;
   }
 }

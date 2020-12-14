@@ -28,6 +28,8 @@ app.get("/", (req, res) => {
 io.sockets.on("connection", socket => {
   let address = socket.request.connection.remoteAddress;
   console.log(address + " connected");
+
+  //initiate all current values when client connects.
   io.emit("init", currentValues);
 
   // +1 Red HP
@@ -113,6 +115,7 @@ io.sockets.on("connection", socket => {
     io.emit("coinFlip", currentValues["coin-counter"]);
   });
 
+  //Disconnect
   socket.on("disconnect", () => {
     console.log(address + " disconnected");
   });
