@@ -29,6 +29,7 @@ body {
   background-image: linear-gradient(to right, darkred, red, darkred);
   margin-bottom: 15px;
   font-weight: bold;
+  margin: 0;
 }
 
 .threeDButton {
