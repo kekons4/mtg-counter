@@ -29,6 +29,8 @@ to execute project, open it in vscode and host it through live server plugin.
 
 Keon Pourboghrat : https://github.com/kekons4
 
+Tavon Pourboghrat : https://github.com/tavonpour
+
 ## Testing
 
 Tested all use cases and edge cases and runs as expected
@@ -37,6 +39,8 @@ Tested all use cases and edge cases and runs as expected
 
 If you have any questions about the projects please contact me at anyone of the ways below.
 
-    Github Usernames: kekons4
+    Github Usernames: kekons4, tavonpour
 
     Keon Pourboghrat : https://github.com/kekons4
+    
+    Tavon Pourboghrat : https://github.com/tavonpour
