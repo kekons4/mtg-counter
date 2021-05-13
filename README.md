@@ -19,7 +19,7 @@ libraries used: mysql2, sequelize, express.js, express-handlebars,awesomefont
 
 ## Usage
 
-to execute project, run 'npm start'
+to execute project, open it in vscode and host it through live server plugin.
 
 ## license
 
